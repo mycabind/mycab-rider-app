@@ -20,6 +20,7 @@ import {
 import styles from '../../assets/styles/index.js';
 import colors from '../../assets/colors/index.js';
 
+
 const Welcome = () => {
   const navigation = useNavigation();
   const [isChanged, setIsChanged] = useState(0);

@@ -24,6 +24,8 @@ const TitleInput = ({
   style,
   inputStyle,
   maxlength,
+  options = [], // Add options prop for dropdown
+  isDropdown = false, // Add isDropdown prop to toggle between TextInput and dropdown,
 }) => {
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
@@ -40,6 +42,9 @@ const TitleInput = ({
       <Text style={[styles.h4, styles.mb8, styles.ts15, {color: colors.black}]}>
         {title}
       </Text>
+      
+      
+      
       <TextInput
         value={value}
         onChangeText={onChangeText}

@@ -1,5 +1,6 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import colors from '../colors';
+import { NavigationHelpersContext } from '@react-navigation/native';
 
 const {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
@@ -405,6 +406,31 @@ const styles = StyleSheet.create({
     padding: 16,
     
   },
+
+  logoProfile:{
+    
+
+    borderColor: colors.smoke,
+    borderRadius: 40, // Half of the width/height to make it round
+    alignSelf: 'center',
+    width: 80,
+    height: 80,
+    resizeMode: 'cover', // Change to 'cover' to fill the round view
+    paddingBottom: 0,
+    
+    paddingBottom:20,
+  },
+
+  shadow: {
+    shadowColor: "grey",
+    shadowOffset: {
+        width: 0,
+        height: -2,
+    },
+    shadowOpacity: 1,
+    shadowRadius: 3.84,
+    elevation: 5,
+     },
 });
 
 export default styles;
