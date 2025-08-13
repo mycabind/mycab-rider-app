@@ -29,6 +29,7 @@ const MobileNumber = () => {
       <TitleInput
         keyboardType="numeric"
         maxlength={10}
+        title="Enter your mobile number"
         placeholder={'Enter mobile number'}
       />
       <Button label={'Continue'} style={[styles.mt48]} onPress={() => navigation.navigate("VerifyOtp")} />

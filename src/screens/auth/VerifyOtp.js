@@ -6,21 +6,24 @@ import {
   TitleInput,
   OTPInput,
   Button,
+  TitleHeader,
 } from '../../components/shared';
 
 const VerifyOtp = ({navigation, route}) => {
+
+   
   return (
     <SafeAreaView style={[styles.p16]}>
-      <View style={[{alignItems: 'center'}, styles.mt20]}>
-        <Text style={[styles.h1, styles.mb12]}>Verify Code</Text>
-        <Text style={[{color: colors.black400}, styles.ts14]}>
-          Please enter the code we just to your mobile number
+      <TitleHeader onPress={()=>navigation.goBack()}/>
+      <View style={[{alignItems: 'center'}, styles.mt20,styles.pd30]}>
+        <Text style={[styles.h1,styles.ts25]}>Verify Code</Text>
+        <Text style={[{color: colors.black400 ,textAlign:"center"}, styles.ts14]}>
+          Please enter the code we just sent to your mobile number
         </Text>
         <Text style={[{color: colors.primary}, styles.ts15]}>
           9477172214
         </Text>
-      </View>
-      <OTPInput OTPInputStyle={[styles.mt36]} />
+         <OTPInput style={[styles.mt48 ,{gap:16}]} />
       <Text
         style={[
           {color: colors.black400, textAlign: 'center'},
@@ -42,6 +45,8 @@ const VerifyOtp = ({navigation, route}) => {
         ]}>
         Resend Code
       </Text>
+      </View>
+     
       <Button label={'Verify'} style={[styles.mt24]} onPress={() => navigation.navigate("Name")}/>
     </SafeAreaView>
   );
